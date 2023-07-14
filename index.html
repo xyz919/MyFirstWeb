@@ -3,10 +3,49 @@
 <head>
    <meta charset="UTF-8">
    <title>My Web Page</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-   <h1>This is my first web page</h1>
-   <p>Hauyinn babi </p>
+   <div class="container">
+      <div class="row">
+         <div class="col-12 d-flex justify-content-center">
+            <h1>XY's Diary📖</h1>       
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-12">
+            <div class="list-group">
+               <a href="#" class="list-group-item list-group-item-action" aria-expanded="false" data-toggle="collapse" data-target="#dropdown1">
+                 2023-07-14 <i class="fas fa-chevron-right float-right"></i>
+               </a>
+               <div id="dropdown1" class="collapse">
+                 <div class="list-group">
+                   <p class="list-group-item list-group">Today is a good day!!</p>
+                 </div>
+               </div>
+               <a href="#" class="list-group-item list-group-item-action" aria-expanded="false" data-toggle="collapse" data-target="#dropdown2">
+                 2023-07-15 <i class="fas fa-chevron-right float-right"></i>
+               </a>
+               <div id="dropdown2" class="collapse">
+                 <div class="list-group">
+                     <p class="list-group-item list-group">Today is a good day too!!</p>
+                 </div>
+               </div>
+             </div>
+         </div>
+      </div>
+   </div>
    <!-- Other content goes here -->
 </body>
+<script>
+   $(document).ready(function() {
+      $('.list-group-item').on('click', function() {
+         $(this).find('i').toggleClass('fa-chevron-right fa-chevron-down');
+      });
+   });
+</script>
 </html>
